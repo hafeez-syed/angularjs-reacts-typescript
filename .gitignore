@@ -60,3 +60,5 @@ typings/
 # ignore package.json lock file
 package-lock.json
 
+# any compiles javascript file must be ignored
+app/**/*.js
