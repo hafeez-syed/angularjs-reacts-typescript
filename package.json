@@ -21,6 +21,7 @@
   "homepage": "https://github.com/hafeez-syed/angularjs-typescript#readme",
   "dependencies": {
     "@types/angular": "^1.6.43",
+    "@types/angular-resource": "^1.5.14",
     "@types/jquery": "^3.3.1",
     "@types/lodash": "^4.14.106"
   }
