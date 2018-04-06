@@ -24,6 +24,10 @@
     "angular-mocks": "^1.6.9",
     "angular-resource": "^1.6.9",
     "angular-route": "^1.6.9",
-    "angularjs": "0.0.1"
+    "angularjs": "0.0.1",
+    "@types/angular": "^1.6.43",
+    "@types/angular-resource": "^1.5.14",
+    "@types/jquery": "^3.3.1",
+    "@types/lodash": "^4.14.106"
   }
 }
