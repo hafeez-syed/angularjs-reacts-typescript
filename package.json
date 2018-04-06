@@ -1,8 +1,11 @@
 {
-  "name": "PS-AngularJS-Typescipt",
+  "name": "ps-angularjs-typescript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +14,8 @@
     "url": "git+https://github.com/hafeez-syed/angularjs-typescript.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Hafeez Syed",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hafeez-syed/angularjs-typescript/issues"
   },
