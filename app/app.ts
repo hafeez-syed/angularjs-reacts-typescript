@@ -3,5 +3,8 @@
  */
 namespace app {
     angular
-        .module('productManagement', []);
+        .module('productManagement', [
+            'common.services',
+            'productResourceMock'
+        ]);
 }
