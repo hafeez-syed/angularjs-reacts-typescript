@@ -60,3 +60,5 @@ typings/
 # ignore package.json lock file
 package-lock.json
 
+# editor files
+.idea/

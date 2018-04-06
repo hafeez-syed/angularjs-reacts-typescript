@@ -1,0 +1,26 @@
+{
+  "name": "PS-AngularJS-Typescipt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hafeez-syed/angularjs-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hafeez-syed/angularjs-typescript/issues"
+  },
+  "homepage": "https://github.com/hafeez-syed/angularjs-typescript#readme",
+  "dependencies": {
+    "angular-mocks": "^1.6.9",
+    "angular-resource": "^1.6.9",
+    "angular-route": "^1.6.9",
+    "angularjs": "0.0.1"
+  }
+}
