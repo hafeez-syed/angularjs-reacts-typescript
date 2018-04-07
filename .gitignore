@@ -60,5 +60,10 @@ typings/
 # ignore package.json lock file
 package-lock.json
 
+<<<<<<< HEAD
+# editor files
+.idea/
+=======
 # any compiles javascript file must be ignored
 app/**/*.js
+>>>>>>> 98dffbda6997826e2e1bf2fe62ab46b80cc510b9

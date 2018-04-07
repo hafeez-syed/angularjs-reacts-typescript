@@ -14,10 +14,13 @@ namespace app.productList {
         showImage: boolean;
         products: app.domain.IProduct[];
 
-        constructor() {
+        static $inject = ['dataAccessService'];
+        constructor(
+            private dataAccessService: app.common.DataAccessService
+        ) {
             this.title = 'Product List';
             this.showImage = false;
-            this.products = [
+            /*this.products = [
                 {
                     "productId": 1,
                     "productName": "Leaf Rake",
@@ -55,6 +58,15 @@ namespace app.productList {
 
             newProduct.price = newProduct.calculateDiscount(10);
             this.products.push(newProduct);
+
+            */
+
+            this.products = [];
+
+            let productResource = dataAccessService.getProductResource();
+            productResource.query((data: app.domain.IProduct[]) => {
+                this.products = data;
+            });
         }
 
         toggleImage(): void {
