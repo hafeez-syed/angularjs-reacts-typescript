@@ -1,6 +1,10 @@
-/**
- * Created by Hafeez Syed on 23/3/18.
- */
+//import './common/services/';
+require('angular');
+require('angular-route');
+
+//require('/');
+//import * as angular from 'angular';
+
 namespace app {
     let main = angular.module('productManagement', [
             'ngRoute',
@@ -18,12 +22,16 @@ namespace app {
             rewriteLinks: true
         });
         $routeProvider
+            .when('/', {
+                templateUrl: '/src/app/products/productListView.html',
+                controller: "ProductListCtrl as vm"
+            })
             .when('/productList', {
-                templateUrl: '/app/products/productListView.html',
+                templateUrl: '/src/app/products/productListView.html',
                 controller: "ProductListCtrl as vm"
             })
             .when('/productDetail/:productId', {
-                templateUrl: '/app/products/productDetailView.html',
+                templateUrl: '/src/app/products/productDetailView.html',
                 controller: "ProductDetailCtrl as vm"
             })
             .otherwise('/productList');

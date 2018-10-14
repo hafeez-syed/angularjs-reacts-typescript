@@ -17,16 +17,21 @@
             </div>
         </nav>
 
-        <div class="container">
+        <div class="container new">
+            <div id="app"></div>
             <ng-view></ng-view>
         </div>
 
         <!-- Library Scripts -->
+<!--
         <script src="lib/angular.js"></script>
         <script src="lib/angular-resource.js"></script>
         <script src="lib/angular-mocks.js"></script>
         <script src="lib/angular-route.js"></script>
-    
+-->
+        <script src="../node_modules/react/umd/react.development.js"></script>
+        <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+
         <!-- Application Scripts -->
         <script src="app/app.js"></script>
 

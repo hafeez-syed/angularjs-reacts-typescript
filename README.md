@@ -1,1 +1,1 @@
-# AngularJS Typescript
+# AngularJS + ReactJS + Typescript
