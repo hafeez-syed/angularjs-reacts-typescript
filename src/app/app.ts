@@ -1,9 +1,20 @@
 //import './common/services/';
-require('angular');
-require('angular-route');
+import * as angular from 'angular';
+import 'angular-mocks';
+import 'angular-resource';
+import 'angular-route';
+//require('angular');
+//require('angular-route');
+//require('angular-resource');
+//require('angular-mocks');
 
+import './common/services/common.services'
+import './common/services/productResourceMock'
+
+//require('./common/services/*');
+//require('./common/services/productResourceMock');
 //require('/');
-//import * as angular from 'angular';
+//import * as angular from 'angular';s
 
 namespace app {
     let main = angular.module('productManagement', [

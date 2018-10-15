@@ -1,3 +1,7 @@
+import * as angular from 'angular';
+import '../../products/products';
+
+
 module app.common {
     var mockResource = angular
         .module("productResourceMock",
