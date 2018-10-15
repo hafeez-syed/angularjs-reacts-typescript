@@ -1,7 +1,7 @@
 /**
  * Created by Hafeez Syed on 24/3/18.
  */
-namespace app.domain {
+export namespace app.domain {
     export interface IProduct {
         productId: number;
         productName: string;

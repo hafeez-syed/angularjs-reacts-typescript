@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Created by Hafeez Syed on 24/3/18.
  */
@@ -22,5 +24,5 @@ var app;
         }());
         domain.Product = Product;
     })(domain = app.domain || (app.domain = {}));
-})(app || (app = {}));
+})(app = exports.app || (exports.app = {}));
 //# sourceMappingURL=products.js.map

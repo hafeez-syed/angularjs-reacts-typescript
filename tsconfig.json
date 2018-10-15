@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./dist/",
     "sourceMap": true,
-    "target": "es5"
+    "target": "es6"
   },
   "include": [
     "./src/react-components/**/*.tsx",
     "./src/app/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

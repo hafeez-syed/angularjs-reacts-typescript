@@ -16,6 +16,14 @@ import './common/services/productResourceMock'
 //require('/');
 //import * as angular from 'angular';s
 
+const ora = require('ora');
+const spinner = ora('Loading unicorns').start();
+
+setTimeout(() => {
+    spinner.color = 'yellow';
+    spinner.text = 'Loading rainbows';
+}, 1000);
+
 namespace app {
     let main = angular.module('productManagement', [
             'ngRoute',

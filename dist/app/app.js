@@ -1,8 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 //import './common/services/';
-require('angular');
-require('angular-route');
+var angular = require("angular");
+require("angular-mocks");
+require("angular-resource");
+require("angular-route");
+//require('angular');
+//require('angular-route');
+//require('angular-resource');
+//require('angular-mocks');
+require("./common/services/common.services");
+require("./common/services/productResourceMock");
+//require('./common/services/*');
+//require('./common/services/productResourceMock');
 //require('/');
-//import * as angular from 'angular';
+//import * as angular from 'angular';s
+var ora = require('ora');
+var spinner = ora('Loading unicorns').start();
+setTimeout(function () {
+    spinner.color = 'yellow';
+    spinner.text = 'Loading rainbows';
+}, 1000);
 var app;
 (function (app) {
     var main = angular.module('productManagement', [
