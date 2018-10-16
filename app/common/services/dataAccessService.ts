@@ -1,9 +1,5 @@
-/**
- * Created by Hafeez Syed on 25/3/18.
- */
-
 namespace app.common {
-    import IProduct = app.domain.IProduct;
+    import IProduct = app.product.IProduct;
 
     interface IDataAccessService {
         getProductResource(): ng.resource.IResourceClass<IProductResource>
