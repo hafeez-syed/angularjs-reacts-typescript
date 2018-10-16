@@ -1,7 +1,8 @@
-/**
- * Created by Hafeez Syed on 24/3/18.
- */
-export namespace app.domain {
+namespace app.product {
+    angular
+        .module('app.product', []);
+
+
     export interface IProduct {
         productId: number;
         productName: string;

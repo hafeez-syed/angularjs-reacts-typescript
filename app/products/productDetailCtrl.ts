@@ -1,10 +1,7 @@
-/**
- * Created by Hafeez Syed on 7/4/18.
- */
 namespace app.productDetail {
     interface IProductDetailModel {
         title: string;
-        product: app.domain.IProduct;
+        product: app.product.IProduct;
     }
 
     interface IProductParams extends ng.route.IRouteParamsService {
@@ -13,20 +10,21 @@ namespace app.productDetail {
 
     class ProductDetailCtrl implements IProductDetailModel{
         title: string;
-        product: app.domain.IProduct;
+        product: app.product.IProduct;
 
         static $inject = ['$routeParams', 'dataAccessService'];
         constructor(
             private $routeParams: IProductParams,
             private dataAccessService: app.common.DataAccessService
         ) {
+            console.log('PRODUCT Detail Controller .. . .');
             this.title = 'Product Detail';
 
             let productResource = dataAccessService.getProductResource();
 
             productResource.get(
                 {productId: $routeParams.productId},
-                (data: app.domain.IProduct) => {
+                (data: app.product.IProduct) => {
                 this.product = data;
             });
         }

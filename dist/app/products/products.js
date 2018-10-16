@@ -1,12 +1,9 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * Created by Hafeez Syed on 24/3/18.
- */
 var app;
 (function (app) {
-    var domain;
-    (function (domain) {
+    var product;
+    (function (product) {
+        angular
+            .module('app.product', []);
         var Product = /** @class */ (function () {
             function Product(productId, productName, productCode, releaseDate, price, description, imageUrl) {
                 this.productId = productId;
@@ -22,7 +19,7 @@ var app;
             };
             return Product;
         }());
-        domain.Product = Product;
-    })(domain = app.domain || (app.domain = {}));
-})(app = exports.app || (exports.app = {}));
+        product.Product = Product;
+    })(product = app.product || (app.product = {}));
+})(app || (app = {}));
 //# sourceMappingURL=products.js.map

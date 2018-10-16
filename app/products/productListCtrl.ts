@@ -1,18 +1,15 @@
-/**
- * Created by Hafeez Syed on 24/3/18.
- */
 namespace app.productList {
     interface IProductListModel {
         title: string;
         showImage: boolean;
-        products: app.domain.IProduct[];
+        products: app.product.IProduct[];
         toggleImage(): void;
     }
 
     class ProductListCtrl implements IProductListModel{
         title: string;
         showImage: boolean;
-        products: app.domain.IProduct[];
+        products: app.product.IProduct[];
 
         static $inject = ['dataAccessService'];
         constructor(
@@ -64,7 +61,7 @@ namespace app.productList {
             this.products = [];
 
             let productResource = dataAccessService.getProductResource();
-            productResource.query((data: app.domain.IProduct[]) => {
+            productResource.query((data: app.product.IProduct[]) => {
                 this.products = data;
             });
         }

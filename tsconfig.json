@@ -3,15 +3,15 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "jsx": "react",
-    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./dist/",
     "sourceMap": true,
-    "target": "es6"
+    "target": "es5"
   },
   "include": [
-    "./src/react-components/**/*.tsx",
-    "./src/app/**/*.ts"
+    "node_modules/@types",
+    "./react-components/**/*.tsx",
+    "./app/**/*.ts"
   ]
 }

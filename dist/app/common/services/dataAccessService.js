@@ -1,6 +1,3 @@
-/**
- * Created by Hafeez Syed on 25/3/18.
- */
 var app;
 (function (app) {
     var common;
