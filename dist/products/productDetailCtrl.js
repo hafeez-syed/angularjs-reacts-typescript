@@ -35,3 +35,4 @@ namespace app.productDetail {
         .module('productManagement')
         .controller('ProductDetailCtrl', ProductDetailCtrl);
 }*/
+//# sourceMappingURL=productDetailCtrl.js.map

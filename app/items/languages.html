@@ -1,0 +1,17 @@
+<div>
+    <ul class='popular-list' ng-if="vm.gitHubData.length">
+        <li ng-repeat="language in vm.gitHubData track by language.name" class="popular-item">
+            <div class='popular-rank'>#{{$index + 1}}</div>
+            <ul className='space-list-items'>
+                <li>
+                    <img class="avatar" src="{{language.owner.avatar_url}}" alt="language.owner.login">
+                </li>
+                <li><a href={{language.html_url}}>{{language.name}}</a></li>
+                <li>@{{language.owner.login}}</li>
+                <li>{{language.stargazers_count}} stars</li>
+            </ul>
+        </li>
+
+    </ul>
+    <a href="#/new">Go back</a>
+</div>

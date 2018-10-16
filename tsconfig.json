@@ -3,6 +3,11 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "jsx": "react",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
     "outDir": "./dist/",
@@ -11,7 +16,6 @@
   },
   "include": [
     "node_modules/@types",
-    "./react-components/**/*.tsx",
-    "./app/**/*.ts"
+    "./app/**/*"
   ]
 }

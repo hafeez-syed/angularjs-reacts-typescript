@@ -13,7 +13,7 @@ namespace app.productList {
 
         static $inject = ['dataAccessService'];
         constructor(
-            private dataAccessService: app.common.DataAccessService
+            //private dataAccessService: app.common.DataAccessService
         ) {
             this.title = 'Product List';
             this.showImage = false;
@@ -60,10 +60,10 @@ namespace app.productList {
 
             this.products = [];
 
-            let productResource = dataAccessService.getProductResource();
+           /* let productResource = dataAccessService.getProductResource();
             productResource.query((data: app.product.IProduct[]) => {
                 this.products = data;
-            });
+            });*/
         }
 
         toggleImage(): void {
