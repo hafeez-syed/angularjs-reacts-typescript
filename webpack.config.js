@@ -1,9 +1,10 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
-	entry: './app/app.ts',
+	entry: ['./react-components/index.tsx', './app/app.ts'],
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, './dist')
@@ -24,6 +25,10 @@ module.exports = {
 	mode: 'development',
 	plugins: [
         new CheckerPlugin(),
+		new webpack.ProvidePlugin({
+			'React': 'react',
+			'ReactDOM': 'react-dom',
+		}),
         new HtmlWebPackPlugin({
 	        inject: true,
 	        template: './index.html'

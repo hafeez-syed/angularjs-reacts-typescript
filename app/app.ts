@@ -25,7 +25,7 @@ namespace app {
                 controller: 'LanguageCtrl as vm'
             })
             .when('/language', {
-                templateUrl: './app/items/languages.html',
+                templateUrl: './checkNew.html',
                 controller: 'LanguageCtrl as vm'
             })
         ;

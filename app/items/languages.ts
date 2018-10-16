@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import {Avatar} from  '../../react-components/'
 
 namespace app.items {
 

@@ -2,14 +2,15 @@
 <html lang="en">
     <head lang="en">
         <meta charset="UTF-8">
-        <title>Acme Product Management</title>
+        <title>AngularJS - ReactJS</title>
 
-        <!-- Style sheets -->
         <link href="css/bootstrap.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
     </head>
 
     <body ng-app="ngReactApp">
+        <div id="app"></div>
+
         <div id="masthead">
             <div class="container">
                 <a href="#/" id="logo">Popular languages</a>
@@ -17,55 +18,10 @@
                 <a class="nav-profile" href="#/food">Food</a>
             </div>
         </div>
-<!--
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <div class="navbar-brand">Acme Product Management</div>
-                </div>
-            </div>
-        </nav>
--->
 
         <div class="container new">
             <ng-view></ng-view>
         </div>
-
-        <!-- Library Scripts -->
-<!--
-        <script src="lib/angular.js"></script>
-        <script src="lib/angular-resource.js"></script>
-        <script src="lib/angular-mocks.js"></script>
-        <script src="lib/angular-route.js"></script>
--->
-
-<!--
-        <script src="../../node_modules/react/umd/react.development.js"></script>
-        <script src="../../node_modules/react-dom/umd/react-dom.development.js"></script>
--->
-
-        <!-- Application Scripts -->
-<!--
-        <script src="app/app.js"></script>
--->
-
-        <!-- Domain Classes -->
-<!--
-        <script src="app/products/products.js"></script>
--->
-
-        <!-- Services -->
-<!--
-        <script src="app/common/services/common.services.js"></script>
-        <script src="app/common/services/dataAccessService.js"></script>
-        <script src="app/common/services/productResourceMock.js"></script>
--->
-
-        <!-- Controllers -->
-<!--
-        <script src="app/products/productListCtrl.js"></script>
-        <script src="app/products/productDetailCtrl.js"></script>
--->
 
     </body>
 </html>

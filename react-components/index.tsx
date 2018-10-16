@@ -1,12 +1,26 @@
-class ReactApp extends React.Component {
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+export class ReactApp extends React.Component {
     render() {
         return (
             <div>
-                Hell from React component
+                Hello from ReactApp
             </div>
         )
     }
 }
+
+export class Avatar extends React.Component {
+    render() {
+        return (
+            <div>
+                Hello from Avatar
+            </div>
+        )
+    }
+}
+
 
 ReactDOM.render(
     <ReactApp/>,
