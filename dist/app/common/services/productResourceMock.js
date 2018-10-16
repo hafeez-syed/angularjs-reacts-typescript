@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var angular = require("angular");
+const angular = require("angular");
 require("../../products/products");
 var app;
 (function (app) {

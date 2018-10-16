@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 //import './common/services/';
-var angular = require("angular");
+const angular = require("angular");
 require("angular-mocks");
 require("angular-resource");
 require("angular-route");
@@ -15,15 +15,15 @@ require("./common/services/productResourceMock");
 //require('./common/services/productResourceMock');
 //require('/');
 //import * as angular from 'angular';s
-var ora = require('ora');
-var spinner = ora('Loading unicorns').start();
-setTimeout(function () {
+const ora = require('ora');
+const spinner = ora('Loading unicorns').start();
+setTimeout(() => {
     spinner.color = 'yellow';
     spinner.text = 'Loading rainbows';
 }, 1000);
 var app;
 (function (app) {
-    var main = angular.module('productManagement', [
+    let main = angular.module('productManagement', [
         'ngRoute',
         'common.services',
         'productResourceMock'

@@ -5,16 +5,15 @@ var app;
 (function (app) {
     var common;
     (function (common) {
-        var DataAccessService = /** @class */ (function () {
-            function DataAccessService($resource) {
+        class DataAccessService {
+            constructor($resource) {
                 this.$resource = $resource;
             }
-            DataAccessService.prototype.getProductResource = function () {
+            getProductResource() {
                 return this.$resource('/api/products/:productId');
-            };
-            DataAccessService.$inject = ['$resource'];
-            return DataAccessService;
-        }());
+            }
+        }
+        DataAccessService.$inject = ['$resource'];
         common.DataAccessService = DataAccessService;
         angular
             .module('common.services')
