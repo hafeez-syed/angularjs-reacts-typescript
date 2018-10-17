@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export class Avatar extends React.Component{
+export class Avatar extends React.Component<{}, {githubRepo: any}> {
     constructor(props: any) {
         super(props);
 

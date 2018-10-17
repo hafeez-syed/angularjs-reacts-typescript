@@ -21,8 +21,8 @@ var Avatar = /** @class */ (function (_super) {
         _this.state = {
             githubRepo: props.githubRepo
         };
+        _this.updateRepo = _this.updateRepo.bind(_this);
         return _this;
-        //this.updateRepo = this.updateRepo.bind(this);
     }
     Avatar.prototype.updateRepo = function (repo) {
         this.setState(function () {
@@ -32,31 +32,25 @@ var Avatar = /** @class */ (function (_super) {
         });
     };
     Avatar.prototype.componentDidMount = function () {
-        debugger;
-        //if (this.state.githubRepo) {
-        this.updateRepo(this.state.githubRepo);
-        //}
+        if (this.state.githubRepo) {
+            this.updateRepo(this.state.githubRepo);
+        }
     };
     Avatar.prototype.render = function () {
-        var githubRepo;
-        //if (this.state.githubRepo) {
-        //githubRepo = this.state.githubRepo;
-        //}
-        return (React.createElement("div", null, this.state.githubRepo
-            ? (React.createElement("div", { className: 'popular-rank' }, "#")
-                ,
-                    React.createElement("ul", { className: "space-list-items" },
-                        React.createElement("li", null,
-                            React.createElement("img", { className: "avatar", src: this.state.githubRepo.owner.avatar_url, alt: "Avatar from " + this.state.githubRepo.owner.login })),
-                        React.createElement("li", null,
-                            React.createElement("a", { href: this.state.githubRepo.html_url }, this.state.githubRepo.name)),
-                        React.createElement("li", null,
-                            "@",
-                            this.state.githubRepo.owner.login),
-                        React.createElement("li", null,
-                            this.state.githubRepo.stargazers_count,
-                            " stars")))
-            : React.createElement("p", null, "Loading...")));
+        var githubRepo = this.state.githubRepo;
+        return (React.createElement("div", null,
+            React.createElement("div", { className: 'popular-rank' }, "#"),
+            React.createElement("ul", { className: "space-list-items" },
+                React.createElement("li", null,
+                    React.createElement("img", { className: "avatar", src: githubRepo.owner.avatar_url, alt: "Avatar from " + githubRepo.owner.login })),
+                React.createElement("li", null,
+                    React.createElement("a", { href: githubRepo.html_url }, githubRepo.name)),
+                React.createElement("li", null,
+                    "@",
+                    githubRepo.owner.login),
+                React.createElement("li", null,
+                    githubRepo.stargazers_count,
+                    " stars"))));
     };
     return Avatar;
 }(React.Component));
