@@ -1,17 +1,16 @@
 import * as angular from 'angular';
-import {Avatar} from  '../../react-components/'
 
 namespace app.items {
 
-    export class Language {
+    export class PopularRepos {
         public data: any = [];
         public name: string = 'hafeez';
-        public gitHubData: any = [];
+        public gitHubRepos: any = [];
         public success: boolean = false;
         constructor(private $scope: any, private apiService: any, private $q: any) {
             this.activate().then((data: any) => {
-                this.gitHubData = data;
-                console.log('Language Controller .. . .');
+                this.gitHubRepos = data;
+                console.log('Popular repos controller .. . .');
             });
         }
 
@@ -25,9 +24,9 @@ namespace app.items {
         }
     }
 
-    Language.$inject = ['$scope', 'apiService', '$q'];
+    PopularRepos.$inject = ['$scope', 'apiService', '$q'];
 
     angular
         .module('ngReactApp')
-        .controller('LanguageCtrl', Language);
+        .controller('PopularReposCtrl', PopularRepos);
 }

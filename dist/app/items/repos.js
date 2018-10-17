@@ -5,22 +5,22 @@ var app;
 (function (app) {
     var items;
     (function (items) {
-        var Language = /** @class */ (function () {
-            function Language($scope, apiService, $q) {
+        var PopularRepos = /** @class */ (function () {
+            function PopularRepos($scope, apiService, $q) {
                 var _this = this;
                 this.$scope = $scope;
                 this.apiService = apiService;
                 this.$q = $q;
                 this.data = [];
                 this.name = 'hafeez';
-                this.gitHubData = [];
+                this.gitHubRepos = [];
                 this.success = false;
                 this.activate().then(function (data) {
-                    _this.gitHubData = data;
-                    console.log('Language Controller .. . .');
+                    _this.gitHubRepos = data;
+                    console.log('Popular repos controller .. . .');
                 });
             }
-            Language.prototype.activate = function () {
+            PopularRepos.prototype.activate = function () {
                 var defer = this.$q.defer();
                 this.apiService.getPopularLanguages('javascript')
                     .then(function (responseData) {
@@ -28,13 +28,13 @@ var app;
                 });
                 return defer.promise;
             };
-            return Language;
+            return PopularRepos;
         }());
-        items.Language = Language;
-        Language.$inject = ['$scope', 'apiService', '$q'];
+        items.PopularRepos = PopularRepos;
+        PopularRepos.$inject = ['$scope', 'apiService', '$q'];
         angular
             .module('ngReactApp')
-            .controller('LanguageCtrl', Language);
+            .controller('PopularReposCtrl', PopularRepos);
     })(items = app.items || (app.items = {}));
 })(app || (app = {}));
-//# sourceMappingURL=languages.js.map
+//# sourceMappingURL=repos.js.map

@@ -11,18 +11,9 @@ export class ReactApp extends React.Component {
     }
 }
 
-export class Avatar extends React.Component {
-    render() {
-        return (
-            <div>
-                Hello from Avatar
-            </div>
-        )
-    }
-}
-
-
+/*
 ReactDOM.render(
     <ReactApp/>,
     document.getElementById('app')
 );
+*/

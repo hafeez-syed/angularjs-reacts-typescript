@@ -12,19 +12,15 @@ var app;
         'ngRoute',
         'common.services'
     ]);
-    require('./items/languages');
+    require('./items/singleRepo');
+    require('./items/repos');
     main.config(routeConfig);
     routeConfig.$inject = ['$routeProvider', '$locationProvider'];
     function routeConfig($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-            templateUrl: './app/items/languages.html',
-            controller: 'LanguageCtrl as vm'
-        })
-            .when('/language', {
-            //templateUrl: './app/items/languages.html',
-            templateUrl: './checkNew.html',
-            controller: 'LanguageCtrl as vm'
+            templateUrl: './app/items/repos.html',
+            controller: 'PopularReposCtrl as vm'
         });
         $locationProvider.hashPrefix('');
     }

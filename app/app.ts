@@ -12,7 +12,8 @@ namespace app {
             'common.services'
     ]);
 
-    require('./items/languages');
+    require('./items/singleRepo');
+    require('./items/repos');
     main.config(routeConfig);
 
     routeConfig.$inject = ['$routeProvider', '$locationProvider'];
@@ -21,12 +22,8 @@ namespace app {
     function routeConfig($routeProvider: ng.route.IRouteProvider, $locationProvider: ng.ILocationProvider): void {
         $routeProvider
             .when('/', {
-                templateUrl: './app/items/languages.html',
-                controller: 'LanguageCtrl as vm'
-            })
-            .when('/language', {
-                templateUrl: './checkNew.html',
-                controller: 'LanguageCtrl as vm'
+                templateUrl: './app/items/repos.html',
+                controller: 'PopularReposCtrl as vm'
             })
         ;
         $locationProvider.hashPrefix('');
