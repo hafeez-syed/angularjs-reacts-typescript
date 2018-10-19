@@ -1,0 +1,7 @@
+<div>
+    <div ng-if="vm.foodRecipes.length"
+         ng-repeat="food in vm.foodRecipes track by food.recipe_id"
+         class='item masonry-brick'>
+        <recipe order="$index" food="food"></recipe>
+    </div>
+</div>

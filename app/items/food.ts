@@ -2,19 +2,19 @@ import * as angular from 'angular';
 
 namespace app.items {
 
-    export class PopularRepos {
-        public gitHubRepos: any = [];
+    export class Food {
+        public foodRecipes: any = [];
 
         constructor(private $scope: any, private apiService: any, private $q: any) {
             this.activate().then((data: any) => {
-                this.gitHubRepos = data;
-                console.log('Popular repos controller .. . .');
+                this.foodRecipes = data;
+                console.log('Food recipes controller .. . .');
             });
         }
 
         public activate() {
             let defer = this.$q.defer();
-            this.apiService.getPopularLanguages('javascript')
+            this.apiService.getFoodRecipes()
                 .then((responseData: any) => {
                     defer.resolve(responseData);
                 });
@@ -22,9 +22,9 @@ namespace app.items {
         }
     }
 
-    PopularRepos.$inject = ['$scope', 'apiService', '$q'];
+    Food.$inject = ['$scope', 'apiService', '$q'];
 
     angular
         .module('ngReactApp')
-        .controller('PopularReposCtrl', PopularRepos);
+        .controller('FoodCtrl', Food);
 }

@@ -5967,3 +5967,59 @@ li {
     border-radius: 50%;
     width: 150px;
 }
+
+
+.item.masonry-brick {
+    margin: 5px;
+    width: 233px;
+    padding: 4px 4px;
+    float: left;
+    display: block;
+    background-color: #FFF;
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px;
+}
+
+.food-img {
+    border-radius: 12px;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+}
+
+.recipe-link {
+
+}
+
+.recipe-name {
+    font-weight: bold;
+    color: #5C5C5C;
+}
+
+.publisher {
+    font-style: italic;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.badge.badge-important {
+    float: right;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding-right: 9px;
+    padding-left: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    background-color: #F9260C;
+}

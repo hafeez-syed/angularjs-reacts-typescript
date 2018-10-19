@@ -2,20 +2,20 @@ import * as angular from 'angular';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Avatar} from "../../react-components/avatar";
+import {Recipe} from "../../react-components/recipe";
 
 namespace app.items {
     angular
         .module('ngReactApp')
-        .directive('singleRepo', () => {
+        .directive('recipe', () => {
         return {
             restrict: 'AE',
             replace: true,
             scope:  {
-                githubRepo: '=',
+                food: '=',
                 order: '='
             },
-            templateUrl: './app/items/singleRepo.html',
+            templateUrl: './app/items/recipe.html',
             controller: () => {
             },
             link: (scope) => {
@@ -27,11 +27,11 @@ namespace app.items {
                     }
                 });
 
-                scope.$watch('githubRepo', (newValue, oldValue) => {
+                scope.$watch('food', (newValue, oldValue) => {
                     if (newValue) {
                         ReactDOM.render(
-                            React.createElement(Avatar, {githubRepo: newValue}),
-                            document.getElementsByClassName('repo-avatar')[componentOrder || 0]
+                            React.createElement(Recipe, {food: newValue}),
+                            document.getElementsByClassName('food-recipe')[componentOrder || 0]
                         )
                     }
                 });
