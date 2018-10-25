@@ -19,8 +19,8 @@ module.exports = {
 			{ test: /\.tsx?$/, loader: ['awesome-typescript-loader'] },
 			{ test: /\.css$/, use: ['style-loader', 'css-loader'] },
             { test: /\.html$/i, loader: 'html-loader' },
-			{ enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
-		]
+            { test: /\.(js|jsx)$/, loader: ['babel-loader'], exclude: /node_modules/, enforce: 'pre' },
+        ]
 	},
 	mode: 'development',
 	plugins: [

@@ -2,9 +2,11 @@ import * as angular from 'angular';
 import 'angular-mocks';
 import 'angular-resource';
 import 'angular-route';
+import 'react-components-2';
 
 import './common/services/common.services';
 import './common/services/apiService';
+import './common/services/react.components';
 
 namespace app {
     let main = angular.module('ngReactApp', [

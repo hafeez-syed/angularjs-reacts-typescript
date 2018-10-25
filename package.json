@@ -37,6 +37,7 @@
     "angular-route": "^1.3.5",
     "angular1-templateurl-loader": "^1.0.0",
     "react": "^16.5.2",
+    "react-components-2": "git+https://github.com/hafeez-syed/ts-react-lib.git",
     "react-dom": "^16.5.2"
   },
   "devDependencies": {

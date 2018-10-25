@@ -13,11 +13,11 @@ namespace app.items {
             replace: true,
             scope:  {
                 food: '=',
-                order: '='
+                order: '=',
+                componentName: '@'
             },
             templateUrl: './app/items/recipe.html',
-            controller: () => {
-            },
+            controller: ['$scope', 'ReactComponentService', RecipeController],
             link: (scope) => {
                 let componentOrder: any;
 
@@ -29,6 +29,10 @@ namespace app.items {
 
                 scope.$watch('food', (newValue, oldValue) => {
                     if (newValue) {
+                        scope;
+                        debugger;
+                        //let oneReactComponent: any = scope.reactComponent;
+                        //console.log(oneReactComponent);
                         ReactDOM.render(
                             React.createElement(Recipe, {food: newValue}),
                             document.getElementsByClassName('food-recipe')[componentOrder || 0]
@@ -38,4 +42,15 @@ namespace app.items {
             }
         }
     });
+
+    export class RecipeController {
+        public reactComponent: any;
+        constructor(private $scope: any, private reactComponentsService: any) {
+            //console.log(this.reactComponentsService.getComponents());
+            //console.log(this.$scope.componentName);
+            //console.log(this.reactComponentsService.getComponents()[this.$scope.componentName]);
+            this.$scope.reactComponent = this.reactComponentsService.getComponents(this.$scope.componentName);
+            console.log(this.$scope.reactComponent);
+        }
+    }
 }

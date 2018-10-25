@@ -1,9 +1,9 @@
 import * as angular from 'angular';
-
 namespace app.items {
 
     export class Food {
         public foodRecipes: any = [];
+        public reactComponent: any;
 
         constructor(private $scope: any, private apiService: any, private $q: any) {
             this.activate().then((data: any) => {
