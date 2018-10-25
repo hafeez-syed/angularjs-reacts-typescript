@@ -1,1 +1,1 @@
-# AngularJS + ReactJS + Typescript
+# AngularJS, React Component host
