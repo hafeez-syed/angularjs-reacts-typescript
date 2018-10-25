@@ -2,40 +2,40 @@ import * as angular from 'angular';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Avatar} from "../../react-components/avatar";
-
 namespace app.items {
     angular
         .module('ngReactApp')
         .directive('singleRepo', () => {
         return {
-            restrict: 'AE',
+            restrict: 'E',
             replace: true,
             scope:  {
-                githubRepo: '=',
-                order: '='
+                props: '=',
+                order: '=',
+                componentName: '@',
+                className: '@',
             },
             templateUrl: './app/items/singleRepo.html',
-            controller: () => {
-            },
-            link: (scope) => {
-                let componentOrder: any;
-
-                scope.$watch('order', (newValue, oldValue) => {
-                    if (newValue) {
-                        componentOrder = newValue;
-                    }
-                });
-
-                scope.$watch('githubRepo', (newValue, oldValue) => {
-                    if (newValue) {
-                        ReactDOM.render(
-                            React.createElement(Avatar, {githubRepo: newValue}),
-                            document.getElementsByClassName('repo-avatar')[componentOrder || 0]
-                        )
-                    }
-                });
-            }
+            controller: ['$scope', 'ReactComponentService', SingleRepoController],
+            controllerAs: 'singleRepoCtrl'
         }
     });
+
+    export class SingleRepoController {
+        public reactComponent: any;
+        public className: string;
+
+        constructor(private $scope: any, private reactComponentsService: any) {
+            this.reactComponent = this.reactComponentsService.getComponents(this.$scope.componentName);
+            this.className = this.$scope.className;
+            this.renderComponent();
+        }
+
+        private renderComponent() {
+            ReactDOM.render(
+                React.createElement(this.reactComponent, this.$scope.props.prop),
+                document.getElementsByClassName(this.className)[this.$scope.order || 0]
+            )
+        }
+    }
 }

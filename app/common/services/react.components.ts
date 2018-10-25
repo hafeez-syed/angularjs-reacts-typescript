@@ -1,6 +1,4 @@
 let reactComponents = require('react-components-2');
-//const reactComponents = import 'react-components-2';
-//import default from 'react-components-2';
 
 namespace app.common {
     export interface IReactComponents {
@@ -12,9 +10,11 @@ namespace app.common {
         }
 
         public getComponents(componentName: string): any {
-            //debugger;
-            let rcm = reactComponents;
             let rc = reactComponents[componentName];
+
+            if (typeof rc === 'object') {
+                return rc[componentName];
+            }
             return rc;
         }
     }

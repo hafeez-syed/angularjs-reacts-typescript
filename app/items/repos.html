@@ -1,7 +1,13 @@
 <div>
     <ul class='popular-list' ng-if="vm.gitHubRepos.length">
         <li ng-repeat="repo in vm.gitHubRepos track by repo.name" class="popular-item">
-            <single-repo order="$index" github-repo="repo"></single-repo>
+            <single-repo
+                    order="$index"
+                    github-repo="repo"
+                    props="{prop: {githubRepo: repo}}"
+                    component-name="Avatar"
+                    class-name="repo-avatar"
+            ></single-repo>
         </li>
     </ul>
 </div>

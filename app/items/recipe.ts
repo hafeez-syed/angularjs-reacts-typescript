@@ -2,7 +2,8 @@ import * as angular from 'angular';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Recipe} from "../../react-components/recipe";
+//import {Recipe} from "../../react-components/recipe";
+import {Avatar} from "../../react-components/Avatar";
 
 namespace app.items {
     angular
@@ -34,7 +35,7 @@ namespace app.items {
                         //let oneReactComponent: any = scope.reactComponent;
                         //console.log(oneReactComponent);
                         ReactDOM.render(
-                            React.createElement(Recipe, {food: newValue}),
+                            React.createElement(Avatar, {food: newValue}),
                             document.getElementsByClassName('food-recipe')[componentOrder || 0]
                         )
                     }
