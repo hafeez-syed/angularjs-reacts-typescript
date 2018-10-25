@@ -2,31 +2,15 @@
 <html lang="en">
     <head lang="en">
         <meta charset="UTF-8">
-        <title>AngularJS - ReactJS</title>
+        <title>AngularJS host for React Component</title>
 
         <link href="css/bootstrap.css" rel="stylesheet" />
         <link href="css/style.css" rel="stylesheet" />
     </head>
 
-    <body ng-app="ngReactApp">
-
-<!--
-        <div id="app"></div>
--->
-
-        <div id="masthead">
-            <div class="container">
-                <a href="#/" id="logo">Popular repos on github</a>
-<!--
-                <a class="nav-engage" href="#/movies">Movies</a>
--->
-                <a class="nav-profile" href="#/food">Food</a>
-            </div>
-        </div>
-
+    <body ng-app="ngHost">
         <div class="container new">
             <ng-view></ng-view>
         </div>
-
     </body>
 </html>

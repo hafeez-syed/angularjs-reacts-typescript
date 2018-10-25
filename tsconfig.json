@@ -16,7 +16,6 @@
   },
   "include": [
     "node_modules/@types",
-    "./react-components/*.tsx",
     "./app/**/*"
   ]
 }

@@ -1,6 +1,6 @@
-let reactComponents = require('react-components-2');
+let reactComponentService = require('react-components-2');
 
-namespace app.common {
+namespace app.ngHost {
     export interface IReactComponents {
     }
 
@@ -10,7 +10,7 @@ namespace app.common {
         }
 
         public getComponents(componentName: string): any {
-            let rc = reactComponents[componentName];
+            let rc = reactComponentService[componentName];
 
             if (typeof rc === 'object') {
                 return rc[componentName];
@@ -20,6 +20,6 @@ namespace app.common {
     }
 
     angular
-        .module('common.services')
+        .module('ngHost')
         .service('ReactComponentService', ReactComponentService);
 }

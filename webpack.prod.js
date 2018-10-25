@@ -1,16 +1,15 @@
 const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
-	//entry: ['./app/index.ts', './app/item/oneNgHost.ts', './app/item/reactComponent.service.ts'],
 	entry: './app/index.ts',
 	output: {
 		filename: 'nghost.js',
 		path: path.resolve(__dirname, './dist')
 	},
-	devtool: 'inline-source-map',
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
 	},
@@ -22,16 +21,16 @@ module.exports = {
             { test: /\.(js|jsx)$/, loader: ['babel-loader'], exclude: /node_modules/, enforce: 'pre' },
         ]
 	},
-	mode: 'development',
+	mode: 'production',
 	plugins: [
+        new CleanWebpackPlugin(['dist']),
         new CheckerPlugin(),
 		new webpack.ProvidePlugin({
 			'React': 'react',
 			'ReactDOM': 'react-dom',
-		}),
-        new HtmlWebPackPlugin({
-	        inject: true,
-	        template: './index.html'
-        }),
-	]
+		})
+	],
+    optimization: {
+        minimize: true
+    }
 };

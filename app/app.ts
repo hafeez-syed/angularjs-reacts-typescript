@@ -14,10 +14,8 @@ namespace app {
             'common.services'
     ]);
 
-    require('./items/singleRepo');
+    require('./items/oneNgHost');
     require('./items/repos');
-    require('./items/recipe');
-    require('./items/food');
     main.config(routeConfig);
 
     routeConfig.$inject = ['$routeProvider', '$locationProvider'];
@@ -28,14 +26,6 @@ namespace app {
             .when('/', {
                 templateUrl: './app/items/repos.html',
                 controller: 'PopularReposCtrl as vm'
-            })
-            .when('/repos', {
-                templateUrl: './app/items/repos.html',
-                controller: 'PopularReposCtrl as vm'
-            })
-            .when('/food', {
-                templateUrl: './app/items/food.html',
-                controller: 'FoodCtrl as vm'
             })
         ;
         $locationProvider.hashPrefix('');

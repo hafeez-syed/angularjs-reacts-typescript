@@ -2,10 +2,10 @@ import * as angular from 'angular';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-namespace app.items {
+namespace app.ngHost {
     angular
-        .module('ngReactApp')
-        .directive('singleRepo', () => {
+        .module('ngHost')
+        .directive('oneNgHost', () => {
         return {
             restrict: 'E',
             replace: true,
@@ -15,13 +15,16 @@ namespace app.items {
                 componentName: '@',
                 className: '@',
             },
-            templateUrl: './app/items/singleRepo.html',
-            controller: ['$scope', 'ReactComponentService', SingleRepoController],
-            controllerAs: 'singleRepoCtrl'
+            //templateUrl: './app/items/oneNgHost.html',
+            template: '<div>\n' +
+            '    <div class="ng-react-host"></div>\n' +
+            '</div>',
+            controller: ['$scope', 'ReactComponentService', OneNgHostController],
+            controllerAs: '0neNgHostCtrl'
         }
     });
 
-    export class SingleRepoController {
+    export class OneNgHostController {
         public reactComponent: any;
         public className: string;
 
