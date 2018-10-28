@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const { CheckerPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
-	//entry: ['./app/index.ts', './app/item/oneNgHost.ts', './app/item/reactComponent.service.ts'],
 	entry: './app/index.ts',
 	output: {
 		filename: 'nghost.js',
@@ -16,10 +15,10 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{ test: /\.tsx?$/, loader: ['awesome-typescript-loader'] },
-			{ test: /\.css$/, use: ['style-loader', 'css-loader'] },
-            { test: /\.html$/i, loader: 'html-loader' },
-            { test: /\.(js|jsx)$/, loader: ['babel-loader'], exclude: /node_modules/, enforce: 'pre' },
+			{ test: /\.tsx?$/, loader: ['awesome-typescript-loader'], exclude: /node_modules/ },
+			{ test: /\.css$/, use: ['style-loader', 'css-loader'], exclude: /node_modules/ },
+            { test: /\.html$/i, loader: 'html-loader', exclude: /node_modules/ },
+            { test: /\.(js|jsx)$/, loader: ['babel-loader'], exclude: /node_modules/, enforce: 'pre' }
         ]
 	},
 	mode: 'development',
@@ -33,5 +32,8 @@ module.exports = {
 	        inject: true,
 	        template: './index.html'
         }),
-	]
+	],
+    optimization: {
+        minimize: false
+    }
 };

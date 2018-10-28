@@ -29,9 +29,11 @@ namespace app.ngHost {
         public className: string;
 
         constructor(private $scope: any, private reactComponentsService: any) {
+            debugger;
             this.reactComponent = this.reactComponentsService.getComponents(this.$scope.componentName);
             this.className = this.$scope.className;
             this.renderComponent();
+            console.log('hello...');
         }
 
         private renderComponent() {
